@@ -22,6 +22,9 @@ docker-compose up -d
 docker-compose down -v
 ```
 
+<img width="1280" height="799" alt="image" src="https://github.com/user-attachments/assets/63e70f5c-dda8-48b6-b611-5db68f67a767" />
+
+
 ### 3. Работа с кафкой
 
 ```
@@ -41,6 +44,9 @@ docker run --rm -it --network host confluentinc/cp-kafka:7.5.0 \
   --from-beginning
 ```
 
+<img width="1280" height="100" alt="image" src="https://github.com/user-attachments/assets/ea29b462-187e-4878-b008-88ff06bd7b74" />
+
+
 ### Порядок запуска
 
 ВАЖНО!!! Запускайте сервисы в строгом порядке:
@@ -54,6 +60,9 @@ docker run --rm -it --network host confluentinc/cp-kafka:7.5.0 \
 ```
 http://localhost:8081/api/config
 ```
+
+<img width="1280" height="288" alt="image" src="https://github.com/user-attachments/assets/2ff4da5f-3fbe-41ba-ba5f-62d60c51b7f7" />
+
 
 Выполнить POST запрос через Postman по адресу(данные вводите через Body->raw, формат JSON):
 ```
