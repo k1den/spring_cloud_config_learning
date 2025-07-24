@@ -8,3 +8,5 @@ CREATE TABLE user_data (
                            message VARCHAR(255),
                            created_at TIMESTAMP
 );
+
+CREATE SEQUENCE message_sequence START 1;

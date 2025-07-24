@@ -1,5 +1,6 @@
 package org.k1den.configclientproject.service;
 
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import org.k1den.configclientproject.entity.UserData;
 import org.k1den.configclientproject.repository.UserDataRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -10,8 +11,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
 @Service
 public class DataService {
+
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     @Autowired
     private UserDataRepository userDataRepository;
@@ -26,7 +33,9 @@ public class DataService {
 
     public DataService() {
         this.objectMapper = new ObjectMapper();
-        this.objectMapper.registerModule(new JavaTimeModule());
+        JavaTimeModule module = new JavaTimeModule();
+        module.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(formatter));
+        this.objectMapper.registerModule(module);
     }
 
     public UserData saveUserData(UserData userData) {

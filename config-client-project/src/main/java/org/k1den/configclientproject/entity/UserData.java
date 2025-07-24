@@ -1,5 +1,8 @@
 package org.k1den.configclientproject.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -9,7 +12,7 @@ public class UserData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_data_seq")
-    @SequenceGenerator(name = "user_data_seq", sequenceName = "user_data_seq", allocationSize = 1)
+    @SequenceGenerator(name = "user_data_seq", sequenceName = "user_data_id_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "name", nullable = false)
@@ -21,6 +24,8 @@ public class UserData {
     @Column(name = "message")
     private String message;
 
+    @JsonProperty("created_at")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
