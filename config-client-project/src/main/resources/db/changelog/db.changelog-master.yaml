@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+      file: changes/create-user-data-table.sql
+      relativeToChangelogFile: true
+      resourceLoader: classpath
+      encoding: UTF-8
