@@ -2,13 +2,28 @@ server:
   port: 8888
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
   application:
     name: config-server
+
   cloud:
     config:
       server:
         native:
           search-locations: classpath:/config-repo
+
   profiles:
     active: native
 
