@@ -30,3 +30,9 @@ spring:
 logging:
   level:
     org.springframework.cloud.config: DEBUG
+
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+    password: client1

@@ -9,4 +9,10 @@ spring:
     config:
       fail-fast: true
       username: client1
-      password: client1
+      password: ENC(ctREQ+LqPFRpJkWn4pzkDg==)
+
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+    password: client1
