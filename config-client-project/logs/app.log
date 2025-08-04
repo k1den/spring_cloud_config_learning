@@ -1,234 +1,42 @@
-2025-07-28 13:48:01 INFO  [main] o.k.c.ConfigClientProjectApplication - Starting ConfigClientProjectApplication using Java 17.0.15 on DESKTOP-VPOET70 with PID 4372 (C:\Users\User\Desktop\spring_cloud_config_learning\config-client-project\target\classes started by User in C:\Users\User\Desktop\spring_cloud_config_learning\config-client-project)
-2025-07-28 13:48:01 INFO  [main] o.k.c.ConfigClientProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-07-28 13:48:01 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2025-07-28 13:48:01 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=config-client, profiles=[default], label=null, version=null, state=null
-2025-07-28 13:48:02 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-28 13:48:02 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interfaces.
-2025-07-28 13:48:02 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=0babf111-7b38-32e1-b3da-d17f8d8f423a
-2025-07-28 13:48:02 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2025-07-28 13:48:02 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
-2025-07-28 13:48:02 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-07-28 13:48:02 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
-2025-07-28 13:48:02 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-07-28 13:48:02 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 675 ms
-2025-07-28 13:48:02 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-07-28 13:48:02 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-07-28 13:48:03 INFO  [main] liquibase.database - Set default schema name to public
-2025-07-28 13:48:03 INFO  [main] liquibase.lockservice - Successfully acquired change log lock
-2025-07-28 13:48:03 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
-2025-07-28 13:48:03 INFO  [main] liquibase.lockservice - Successfully released change log lock
-2025-07-28 13:48:03 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-28 13:48:03 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
-2025-07-28 13:48:03 INFO  [main] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-07-28 13:48:03 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2025-07-28 13:48:03 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-07-28 13:48:03 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-28 13:48:03 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-28 13:48:05 INFO  [main] o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2025-07-28 13:48:05 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
-2025-07-28 13:48:05 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2025-07-28 13:48:06 INFO  [main] o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2025-07-28 13:48:06 INFO  [main] o.k.c.ConfigClientProjectApplication - Started ConfigClientProjectApplication in 6.404 seconds (JVM running for 6.743)
-2025-07-28 13:48:40 INFO  [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-28 13:48:40 INFO  [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-07-28 13:48:40 INFO  [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-07-28 13:48:40 INFO  [http-nio-8081-exec-2] o.k.c.service.DataService - Получен запрос на сохранение данных: name=Денис, email=denis@example.com
-2025-07-28 13:48:40 INFO  [http-nio-8081-exec-2] o.k.c.service.DataService - Данные успешно сохранены в БД: UserData{id=29, name='Денис', email='denis@example.com', message='Привет, я Денис', createdAt=2025-07-28T13:48:40.871562600}
-2025-07-28 13:48:40 INFO  [http-nio-8081-exec-2] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
-	acks = -1
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2025-07-28 13:48:40 INFO  [http-nio-8081-exec-2] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
-2025-07-28 13:48:41 INFO  [http-nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.1.1
-2025-07-28 13:48:41 INFO  [http-nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 97671528ba54a138
-2025-07-28 13:48:41 INFO  [http-nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753699721016
-2025-07-28 13:48:41 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:41 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:41 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:41 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:41 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:42 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:42 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:42 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:42 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:42 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:42 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:43 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:43 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:43 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:44 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:44 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:44 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:46 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:46 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:46 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:47 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:47 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:47 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:48 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:48 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:48 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:49 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:49 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:49 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:50 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:50 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:50 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:51 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:51 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:51 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:52 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:52 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:52 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:53 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:53 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:53 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:54 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:54 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:54 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:55 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:55 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:55 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:56 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:56 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:56 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:57 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:57 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:57 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:48:58 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:48:58 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:48:58 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:49:00 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:49:00 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:49:00 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:49:01 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:49:01 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:49:01 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-28 13:49:01 INFO  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2025-07-28 13:49:01 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
-2025-07-28 13:49:01 WARN  [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-07-31 14:20:21 INFO  [main] o.k.c.ConfigClientProjectApplication - Starting ConfigClientProjectApplication using Java 17.0.15 on DESKTOP-VPOET70 with PID 18056 (C:\Users\User\Desktop\spring_cloud_config_learning\config-client-project\target\classes started by User in C:\Users\User\Desktop\spring_cloud_config_learning\config-client-project)
-2025-07-31 14:20:21 INFO  [main] o.k.c.ConfigClientProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 14:20:21 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2025-07-31 14:20:21 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2025-07-31 14:20:21 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2025-07-31 14:20:21 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2025-07-31 14:20:21 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2025-07-31 14:20:21 INFO  [main] o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
-2025-07-31 14:20:22 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-31 14:20:22 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
-2025-07-31 14:20:22 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=e707f95e-e63c-3cda-b1e8-2721821e04e7
-2025-07-31 14:20:22 INFO  [main] c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2025-07-31 14:20:22 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2025-07-31 14:20:22 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2025-07-31 14:20:22 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
-2025-07-31 14:20:22 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-07-31 14:20:22 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
-2025-07-31 14:20:22 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-07-31 14:20:22 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 697 ms
-2025-07-31 14:20:22 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [liquibase.integration.spring.SpringLiquibase]: Factory method 'liquibase' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
-2025-07-31 14:20:22 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-07-31 14:20:22 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+2025-08-04 18:34:57 INFO  [main] c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2025-08-04 18:34:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2025-08-04 18:34:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource bootstrap [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:34:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:34:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2025-08-04 18:34:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:34:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:34:57 INFO  [main] c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2025-08-04 18:34:57 INFO  [main] c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2025-08-04 18:34:57 INFO  [main] c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2025-08-04 18:34:58 INFO  [main] o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2025-08-04 18:34:59 WARN  [main] o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: 401 : [{"timestamp":"2025-08-04T15:34:59.066+00:00","status":401,"error":"Unauthorized","message":"","path":"/config-client/default"}]
+2025-08-04 18:34:59 INFO  [main] o.k.c.ConfigClientProjectApplication - No active profile set, falling back to default profiles: default
+2025-08-04 18:34:59 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2025-08-04 18:34:59 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 1 JPA repository interfaces.
+2025-08-04 18:34:59 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=ef35977d-2e21-300e-926a-0901fdabc21d
+2025-08-04 18:34:59 INFO  [main] c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:34:59 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:34:59 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-08-04 18:34:59 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-08-04 18:34:59 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 18:34:59 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2025-08-04 18:34:59 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 18:34:59 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 484 ms
+2025-08-04 18:34:59 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.autoconfigure.RefreshAutoConfiguration$JpaInvokerConfiguration': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2025-08-04 18:34:59 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-04 18:34:59 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2025-07-31 14:20:22 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+2025-08-04 18:34:59 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -247,3 +55,206 @@ Consider the following:
 	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
 	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
 
+2025-08-04 18:37:00 INFO  [main] c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2025-08-04 18:37:00 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2025-08-04 18:37:00 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource bootstrap [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:37:00 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:37:00 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2025-08-04 18:37:00 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:37:00 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:37:00 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/bootstrap.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:37:00 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$15d88118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-04 18:37:00 INFO  [main] c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2025-08-04 18:37:00 INFO  [main] c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2025-08-04 18:37:00 INFO  [main] c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2025-08-04 18:37:00 INFO  [main] c.u.j.encryptor.DefaultLazyEncryptor - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2025-08-04 18:37:00 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2025-08-04 18:37:00 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2025-08-04 18:37:00 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2025-08-04 18:37:00 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2025-08-04 18:37:00 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2025-08-04 18:37:00 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2025-08-04 18:37:00 WARN  [main] o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'configClientProperties': Could not bind properties to 'ConfigClientProperties' : prefix=spring.cloud.config, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.password' to java.lang.String
+2025-08-04 18:37:00 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-08-04 18:37:00 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.password' to java.lang.String:
+
+    Reason: Failed to bind properties under 'spring.cloud.config.password' to java.lang.String
+
+Action:
+
+Update your application's configuration
+
+2025-08-04 18:37:00 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'configClientProperties': Could not bind properties to 'ConfigClientProperties' : prefix=spring.cloud.config, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.password' to java.lang.String
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:92)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:78)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.k1den.configclientproject.ConfigClientProjectApplication.main(ConfigClientProjectApplication.java:12)
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.password' to java.lang.String
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$4(Binder.java:447)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:92)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:80)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:56)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$5(Binder.java:451)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withDataObject(Binder.java:557)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$300(Binder.java:512)
+	at org.springframework.boot.context.properties.bind.Binder.bindDataObject(Binder.java:449)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:390)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:225)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(ConfigurationPropertiesBinder.java:90)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:89)
+	... 31 common frames omitted
+Caused by: com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Unable to decrypt property: ENC(ctREQ+LqPFRpJkWn4pzkDg==) resolved to: ENC(ctREQ+LqPFRpJkWn4pzkDg==). Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.lambda$resolvePropertyValue$0(DefaultPropertyResolver.java:63)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:57)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:69)
+	at com.ulisesbocchio.jasyptspringboot.caching.CachingDelegateEncryptablePropertySource.getProperty(CachingDelegateEncryptablePropertySource.java:74)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:40)
+	at org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource.getConfigurationProperty(SpringIterableConfigurationPropertySource.java:105)
+	at org.springframework.boot.context.properties.bind.Binder.findProperty(Binder.java:422)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:369)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319)
+	... 47 common frames omitted
+Caused by: org.jasypt.exceptions.EncryptionOperationNotPossibleException: null
+	at org.jasypt.encryption.pbe.StandardPBEByteEncryptor.decrypt(StandardPBEByteEncryptor.java:1054)
+	at org.jasypt.encryption.pbe.StandardPBEStringEncryptor.decrypt(StandardPBEStringEncryptor.java:738)
+	at org.jasypt.encryption.pbe.PooledPBEStringEncryptor.decrypt(PooledPBEStringEncryptor.java:511)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:73)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.lambda$resolvePropertyValue$0(DefaultPropertyResolver.java:61)
+	... 56 common frames omitted
+2025-08-04 18:43:52 INFO  [main] c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2025-08-04 18:43:52 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2025-08-04 18:43:52 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource bootstrap [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:52 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:52 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2025-08-04 18:43:52 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:43:52 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:52 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/bootstrap.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:52 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$15d88118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-04 18:43:52 INFO  [main] c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2025-08-04 18:43:52 INFO  [main] c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2025-08-04 18:43:52 INFO  [main] c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2025-08-04 18:43:52 INFO  [main] c.u.j.encryptor.DefaultLazyEncryptor - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2025-08-04 18:43:52 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2025-08-04 18:43:52 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2025-08-04 18:43:52 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2025-08-04 18:43:52 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2025-08-04 18:43:52 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2025-08-04 18:43:52 INFO  [main] c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2025-08-04 18:43:53 INFO  [main] o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2025-08-04 18:43:54 INFO  [main] o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=config-client, profiles=[default], label=null, version=null, state=null
+2025-08-04 18:43:54 INFO  [main] o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-classpath:/config-repo/config-client.yml'}]
+2025-08-04 18:43:54 INFO  [main] o.k.c.ConfigClientProjectApplication - No active profile set, falling back to default profiles: default
+2025-08-04 18:43:54 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2025-08-04 18:43:55 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 1 JPA repository interfaces.
+2025-08-04 18:43:55 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=ef35977d-2e21-300e-926a-0901fdabc21d
+2025-08-04 18:43:55 INFO  [main] c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource bootstrapProperties-classpath:/config-repo/config-client.yml [org.springframework.cloud.bootstrap.config.BootstrapPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:43:55 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2025-08-04 18:43:55 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-08-04 18:43:55 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 18:43:55 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2025-08-04 18:43:55 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 18:43:55 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 452 ms
+2025-08-04 18:43:55 INFO  [main] c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2025-08-04 18:43:55 INFO  [main] c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2025-08-04 18:43:55 INFO  [main] c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2025-08-04 18:43:55 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2025-08-04 18:43:55 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-04 18:43:55 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-04 18:43:55 INFO  [task-1] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-04 18:43:55 INFO  [task-1] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.23.Final
+2025-08-04 18:43:55 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-04 18:43:55 INFO  [task-1] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-08-04 18:43:55 INFO  [task-1] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-08-04 18:43:55 INFO  [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-04 18:43:55 INFO  [task-1] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 18:43:56 INFO  [main] o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-04 18:43:56 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-08-04 18:43:56 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.RefreshScopeRefreshedEventListener - Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source bootstrapProperties-classpath:/config-repo/config-client.yml refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source systemProperties refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source systemEnvironment refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source random refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source springCloudClientHostInfo refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source applicationConfig: [classpath:/application.yml] refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source springCloudDefaultProperties refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source applicationConfig: [classpath:/bootstrap.yml] refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source cachedrandom refreshed
+2025-08-04 18:43:56 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2025-08-04 18:43:56 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2025-08-04 18:43:56 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2025-08-04 18:43:57 INFO  [main] o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-04 18:43:57 INFO  [main] c.u.j.c.RefreshScopeRefreshedEventListener - Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2025-08-04 18:43:57 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source systemProperties refreshed
+2025-08-04 18:43:57 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source systemEnvironment refreshed
+2025-08-04 18:43:57 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source random refreshed
+2025-08-04 18:43:57 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source springCloudClientHostInfo refreshed
+2025-08-04 18:43:57 INFO  [main] c.u.j.c.CachingDelegateEncryptablePropertySource - Property Source applicationConfig: [classpath:/bootstrap.yml] refreshed
+2025-08-04 18:43:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-08-04 18:43:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2025-08-04 18:43:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2025-08-04 18:43:57 INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudDefaultProperties [org.springframework.cloud.bootstrap.BootstrapApplicationListener$ExtendedDefaultPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2025-08-04 18:43:57 INFO  [main] o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+2025-08-04 18:43:58 INFO  [main] o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+2025-08-04 18:43:58 INFO  [main] o.k.c.ConfigClientProjectApplication - Started ConfigClientProjectApplication in 7.504 seconds (JVM running for 7.843)
+2025-08-04 18:44:10 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-04 18:44:10 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2025-08-04 18:44:10 INFO  [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-04 18:44:10 INFO  [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

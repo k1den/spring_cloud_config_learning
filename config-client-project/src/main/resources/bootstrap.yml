@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      username: client1
+      password: ENC(YFkXDmRkI+v6/ASSHZ6NyLK/qAer9xLR)
+      profile: default
+
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+    password: client1
